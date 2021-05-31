@@ -13,6 +13,8 @@ CALENDAR_URL_PINCODE = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/ca
 CAPTCHA_URL = "https://cdn-api.co-vin.in/api/v2/auth/getRecaptcha"
 OTP_PUBLIC_URL = "https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP"
 OTP_PRO_URL = "https://cdn-api.co-vin.in/api/v2/auth/generateMobileOTP"
+KVDB_OTP_BUCKET = "https://kvdb.io/VVW5GDyH83jhvtRaA9GZun/"
+KVDB_BOOKING_BUCKET = "https://kvdb.io/f6MCXNCaWCAExZZjDRSnK/"
 
 WARNING_BEEP_DURATION = (1000, 5000)
 
@@ -510,7 +512,7 @@ def book_appointment(request_header, details, mobile, generate_captcha_pref):
                     "                        Hey, Hey, Hey! It's your lucky day!                       "
                 )
                 print("\nPress any key thrice to exit program.")
-                requests.put("https://kvdb.io/thofdz57BqhTCaiBphDCp/" + str(uuid.uuid4()), data={})
+                requests.put(KVDB_BOOKING_BUCKET + str(uuid.uuid4()), data={})
                 os.system("pause")
                 os.system("pause")
                 os.system("pause")
@@ -1024,7 +1026,7 @@ def generate_token_OTP(mobile, request_header):
     """
     This function generate OTP and returns a new token or None when not able to get token
     """
-    storage_url = "https://kvdb.io/ASth4wnvVDPkg2bdjsiqMN/" + mobile
+    storage_url = KVDB_OTP_BUCKET + mobile
 
     txnId = clear_bucket_and_send_OTP(storage_url, mobile, request_header)
 
