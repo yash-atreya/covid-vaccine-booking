@@ -1,10 +1,10 @@
-<h1 align="center"> Bombardier Fully Automated COVID-19 Vaccination Slot Booking Script</h1>
+<h1 align="center">Fully Automated COVID-19 Vaccination Slot Booking Script</h1>
 
 <div align="center">
 
-<i>This is a fork over the neat [covid-vaccine-booking](https://github.com/pallupz/covid-vaccine-booking). Thanks for creating a playground for me to build on :metal:</i>
+<i>This is a fork over the neat [covid-vaccine-booking](https://github.com/bombardier-gif/covid-vaccine-booking)</i>
 
-<i>Loved the project? Please consider [donating](http://buymeacoff.ee/bombardier) to help it improve!</i>
+<!-- <i>Loved the project? Please consider [donating](http://buymeacoff.ee/bombardier) to help it improve!</i> -->
 
 </div>
 
@@ -128,7 +128,7 @@
 <br>
 
 ### Option 2: CoWIN OTP Retriever
-1. Install the [CoWinOTPRetriever Android app](./CoWinOtpRetreiver.apk?raw=true) by enabling installation from unknown sources.
+1. Install the [CoWinOTPRetriever Android app](./AndroidOTPRetriever.apk?raw=true) by enabling installation from unknown sources.
 2. Follow this guide to install apps from unknown sources: https://www.verizon.com/support/knowledge-base-222186/
 3. Allow the app to run in background so that the app does not stop even if you multi-task or leave the phone idle. (Note that, there still might be some phone model specific settings and optimizations which could stop the app from running in background. Check point number 8)
 4. Grant sms access to allow the app to read CoWIN OTP sms.
